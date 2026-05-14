@@ -9,6 +9,8 @@ while True:
         comida = input()
         usuario = nome + comida # nome de usuário personalizado.
         print(f'hmmm, então é {comida} agora que eu sei, que tal eu te chamar de {usuario}!')
+        
+        
         while True: # loop para ativar um submenu, assim deixando o programa mais fluído, sem a necessidade de reinicar todo o looping fa linha 3.
             inicio2 = input(f'Então {usuario}, o que você gostaria de fazer agora? \n1 - Saber a data e hora atual \n2 - Sair do submenu \nDigite aqui a opção escolhida:')
             if inicio2 == "1":
@@ -28,10 +30,14 @@ while True:
                 break
             else:             
                 print("Opção inválida, por favor escolha uma das opções acima já ditas.")            
+    
+    
     elif inicio == "2":
        data = datetime.now() # obtendo a data e hora do S.O
        print (data.strftime(f'Então, a data e hora atual é: {"%d/%m/%Y %H:%M:%S"}')) # método "srtftime" para personalizar exibição de data e hora.
-       while True:
+       
+        
+        while True:
            inicio3 = input("Ok, agora você gostaria de gostaria de explorar as próximas opções? \n1 - Saudações \n2 - Sair do submenu \nDigite aqui a opção escolhida:")
            if inicio3 == "1":
             print("Opa! Então, queria te conhecer mais! Me diga seu nome:")
@@ -52,6 +58,8 @@ while True:
            elif inicio3== "2":
                 print(f"Então adeus meu querido usuário misterioso!!")
                 break
+    
+    
     elif inicio == "3":
         print(f"Então adeus meu querido usuário misterioso!")
         exit() # finaliza o programa caso a opção 3 seja escolhida.         
