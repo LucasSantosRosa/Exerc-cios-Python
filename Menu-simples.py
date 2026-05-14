@@ -14,6 +14,15 @@ while True:
             if inicio2 == "1":
                 data = datetime.now() # obtendo a data e hora atual do S.O
                 print (data.strftime(f'Então {usuario}, a data e hora atual é: {"%d/%m/%Y %H:%M:%S"}')) # método "srtftime" para personalizar exibição de data e hora.
+                continuaçao = input(f"Então {usuario}, você gostaria de sair do submenu ou quer simplesmente fechar todo o programa? \n1 - Sair do submenu \n2 - Fechar o programa \nDigite aqui a opção escolhida:") # opção para sair do submenu ou fechar o programa.
+                if continuaçao == "1":
+                    print(f"Então te vejo do outro lado meu querido usuário {usuario}!")
+                    break # finaliza o submenu e volta para o menu inicial caso a opção 1 seja escolhida.
+                elif continuaçao == "2":
+                    print(f"Então adeus meu querido usuário {usuario}!")
+                    exit() # finaliza o programa caso a opção 2 seja escolhida.
+                else:
+                    print("Opção inválida, por favor escolha uma das opções acima já ditas.")    
             elif inicio2 == "2":
                 print(f"Então adeus meu querido usuário {usuario}!")
                 break
@@ -21,9 +30,30 @@ while True:
                 print("Opção inválida, por favor escolha uma das opções acima já ditas.")            
     elif inicio == "2":
        data = datetime.now() # obtendo a data e hora do S.O
-       print (data.strftime(f'Então {usuario}, a data e hora atual é: {"%d/%m/%Y %H:%M:%S"}')) # método "srtftime" para personalizar exibição de data e hora.
+       print (data.strftime(f'Então, a data e hora atual é: {"%d/%m/%Y %H:%M:%S"}')) # método "srtftime" para personalizar exibição de data e hora.
+       while True:
+           inicio3 = input("Ok, agora você gostaria de gostaria de explorar as próximas opções? \n1 - Saudações \n2 - Sair do submenu \nDigite aqui a opção escolhida:")
+           if inicio3 == "1":
+            print("Opa! Então, queria te conhecer mais! Me diga seu nome:")
+            nome = input()
+            print(f'Então olá {nome}! Agora quero saber qual comida você mais gosta! Fala pra mim aqui:')
+            comida = input()
+            usuario = nome + comida # nome de usuário personalizado.
+            print(f'hmmm, então é {comida} agora que eu sei, que tal eu te chamar de {usuario}!')
+            continuaçao = input(f"Então {usuario}, você gostaria de sair do submenu ou quer simplesmente fechar todo o programa? \n1 - Sair do submenu \n2 - Fechar o programa \nDigite aqui a opção escolhida:") # opção para sair do submenu ou fechar o programa.
+            if continuaçao == "1":
+                print(f"Então te vejo do outro lado meu querido usuário {usuario}!")
+                break # finaliza o submenu e volta para o menu inicial caso a opção 1 seja escolhida.
+            elif continuaçao == "2":
+                print(f"Então adeus meu querido usuário {usuario}!")
+                exit() # finaliza o programa caso a opção 2 seja escolhida.
+            else:
+                print("Opção inválida, por favor escolha uma das opções acima já ditas.")          
+           elif inicio3== "2":
+                print(f"Então adeus meu querido usuário misterioso!!")
+                break
     elif inicio == "3":
-        print(f"Então adeus meu querido usuário {usuario}!")
+        print(f"Então adeus meu querido usuário misterioso!")
         exit() # finaliza o programa caso a opção 3 seja escolhida.         
     else:
         print("Opção inválida, por favor escolha uma das opções acima já ditas.")  
