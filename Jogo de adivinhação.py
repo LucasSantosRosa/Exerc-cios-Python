@@ -1,5 +1,4 @@
-# NOME: LUCAS DANIEL DOS SANTOS ROSA
-# SALA: 1B
+
 import random   # importa a biblioteca random para gerar números aleatórios.
 sorteio = random.randint(1, 100) # gera um único número aleatório para o código inteiro.
 while True:
